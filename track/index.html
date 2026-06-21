@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快捷物流查询系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-container">
+        <h2>📦 物流状态实时查询</h2>
+        <p class="subtitle">请输入您的快件单号获取最新派送动态</p>
+        
+        <div class="search-box">
+            <input type="text" id="tracking-id" placeholder="例如: SH123456789" autocomplete="off">
+            <button id="search-btn">立即查询</button>
+        </div>
+
+        <div id="error-message" class="error-box hidden"></div>
+
+        <div id="result-container" class="result-box hidden">
+            <div class="order-info">
+                <span>单号: <strong id="res-id">-</strong></span>
+                <span>当前状态: <span id="res-status" class="status-badge">-</span></span>
+            </div>
+            
+            <div class="timeline" id="timeline">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
